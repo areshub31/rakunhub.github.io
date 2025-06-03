@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RakunHub Giriş</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-image: url('media/bg.gif');
+      background-size: cover;
+      background-position: center;
+    }
+    .title {
+      font-size: 3em;
+      animation: colorchange 5s infinite;
+      border: 4px solid red;
+      padding: 10px 20px;
+      margin-bottom: 40px;
+    }
+    @keyframes colorchange {
+      0% { color: red; }
+      25% { color: orange; }
+      50% { color: yellow; }
+      75% { color: crimson; }
+      100% { color: red; }
+    }
+    input[type="password"] {
+      padding: 10px;
+      font-size: 1em;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">Hoş Geldin</div>
+  <input type="password" id="password" placeholder="Şifre gir">
+  <button onclick="checkPassword()">Giriş</button>
+  <script>
+    function checkPassword() {
+      const pass = document.getElementById('password').value;
+      if (pass === "rakunhub") {
+        window.location.href = "rakunhub.html";
+      } else {
+        alert("Yanlış şifre!");
+      }
+    }
+  </script>
+</body>
+</html>
